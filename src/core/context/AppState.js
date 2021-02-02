@@ -1,5 +1,5 @@
 import React, { useReducer, useCallback, useEffect } from "react";
-import { StatusBar } from "react-native";
+import { StatusBar } from "expo-status-bar";
 
 //context
 import AppContext from "./appContext";
@@ -38,9 +38,7 @@ const AppState = (props) => {
       <ThemeContext.Provider
         value={state.lightTheme ? theme.light : theme.dark}
       >
-        <StatusBar
-          barStyle={state.lightTheme ? "dark-content" : "light-content"}
-        />
+        <StatusBar style={state.lightTheme ? "dark" : "light"} />
         {props.children}
       </ThemeContext.Provider>
     </AppContext.Provider>
