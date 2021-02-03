@@ -1,12 +1,12 @@
 import React from "react";
 import { Dimensions, Platform, PixelRatio } from "react-native";
 
-const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
+const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
 // based on iphone 5s's scale
-const scale = SCREEN_WIDTH / 320;
 
 const normalize = (size) => {
+  const scale = SCREEN_WIDTH / 320;
   const newSize = size * scale;
 
   if (Platform.OS === "ios") {

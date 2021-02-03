@@ -1,4 +1,4 @@
-import React, { useReducer, useCallback, useEffect } from "react";
+import React, { useReducer } from "react";
 import { StatusBar } from "expo-status-bar";
 
 //context
