@@ -1,9 +1,13 @@
 import React, { Component } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ActivityIndicator, View } from "react-native";
+
+import * as SplashScreen from "expo-splash-screen";
+import * as Updates from "expo-updates";
+
+import AsyncStorage from "@react-native-async-storage/async-storage";
+
 import AppContext from "../core/context/appContext";
 import ThemeContext from "../core/ThemeContext";
-import * as SplashScreen from "expo-splash-screen";
 
 const updateCheck = async () => {
   await Updates.checkForUpdateAsync().then(async (update) => {
